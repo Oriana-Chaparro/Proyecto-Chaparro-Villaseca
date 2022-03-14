@@ -1,0 +1,320 @@
+header{
+    background-color: rgb(10, 36, 116);
+    grid-area: header;
+}
+
+
+header nav ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300 bold;
+    list-style: none;
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    transition: all 2s;
+}
+    
+
+header nav ul li a{
+    background-color: rgb(10, 36, 116);
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header nav ul li:hover{
+    transform: scale(1.1);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: rgb(10, 36, 116);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400 bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: h1;
+}
+
+h2{
+    color: rgb(105, 179, 204);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto__index1{
+    grid-area: textoindex1;
+}
+
+.texto__index2{
+    grid-area: textoindex2;
+}
+
+.gridtextoquienes{
+    grid-area: textoquienes;
+}
+
+
+/* contacto */
+main div ul li{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactoleft{
+    align-items: flex-start;
+}
+
+/* footer */
+footer{
+    background-color: rgb(10, 36, 116);
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    grid-area: footer;
+}
+
+footer div ul li{
+    list-style: none;
+    padding: 5px;
+}
+
+
+.flexfooter__vertical ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+
+footer div ul li a{
+    color: whitesmoke;
+    text-decoration: none;   
+}
+
+.flexfooter__horizontal ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexfooter__horizontal{
+    height: 100%;
+    width: 70%;
+
+}
+
+.footercontacto{
+    height: 100vh;
+}
+
+/* partes con imagenes */
+.imagentitulo{
+    width: 100%;
+    height: 70px;
+    grid-area: imagentitulo;
+    background-image: url(../img/imagenplanta.png);
+}
+
+.fleximagenindex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gridimagenindex{
+    grid-area: imagenindex;
+    width: 100%;
+}
+
+.flexquienesimagen{
+    justify-content: center;
+}
+
+.gridimagenquienes{
+    grid-area: imagenquienes;
+}
+
+.flexquienes{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: center;  
+}
+
+.preguntashorizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* grid */
+.gridindex{
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+    "header header header header"
+    "imagentitulo imagentitulo imagentitulo imagentitulo"
+    "h1 h1 h1 h1"
+    "textoindex1 textoindex1 textoindex1 textoindex1"
+    "imagenindex imagenindex imagenindex imagenindex"
+    "textoindex2 textoindex2 textoindex2 textoindex2"
+    "footer footer footer footer";
+    grid-column: 1fr 1fr 1fr 1fr;
+}
+
+.gridquienes{
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+    "header header header header"
+    "imagentitulo imagentitulo imagentitulo imagentitulo"
+    "h1 h1 h1 h1"
+    "textoquienes textoquienes textoquienes imagenquienes"
+    "footer footer footer footer";
+    grid-column: 1fr 1fr 1fr 1fr;
+}
+
+/* media query*/
+@media screen and (max-width: 480px){
+
+    header nav ul li a{
+        font-size: 3vw;
+    }
+
+    header{
+        grid-area: headermediaquery;
+    }
+
+    .gridimagentitulomediaquery{
+        background-image: url(../img/imagenplanta.png);
+        max-width: 480px;
+        width: 100%;
+        grid-area: imagentitulomediaquery;
+    }
+
+    h1{
+        font-size: 4vw;
+        grid-area: h1mediaquery;
+    }
+
+    p{
+       font-size: 3vw; 
+    }
+
+    footer{
+        font-size: 2.5vw;
+        grid-area: footermediaquery;
+    }
+
+    /*index*/
+    .texto__index1mediaquery{
+        grid-area: textoindex1mediaquery;
+    }
+
+    .texto__index2mediaquery{
+        grid-area: textoindex2mediaquery;  
+    }
+
+    .gridimagenindex{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .gridimagenindex1{
+        grid-area: imagenindex1;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .gridimagenindex2{
+        grid-area: imagenindex2;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .gridimagenindex3{
+        grid-area: imagenindex3;
+        width: 100%;
+    }
+
+   .gridindexmediaquery{
+       height: auto;
+       display: grid;
+       grid-template-areas: 
+        "headermediaquery"
+        "imagentitulomediaquery"
+        "h1mediaquery"
+        "textoindex1mediaquery"
+        "imagenindex1"
+        "imagenindex2"
+        "imagenindex3"
+        "textoindex2mediaquery"
+        "footermediaquery";
+       grid-column: 1fr;
+    }
+
+    /*quienes*/
+    .mainquienesmediaquery{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center; 
+    }
+
+    .textoquienesmediaquery{
+        font-size: 3vw;
+        grid-area: textoquienesmediaquery;
+    }
+
+    .imagenquienesmediaquery{
+        justify-content: center;
+        margin-bottom: 5px;
+        grid-area: imagenquienesmediaquery;
+    }
+
+    .gridquienesmediaquery{
+       height: auto;
+       display: grid;
+       grid-template-areas: 
+       "headermediaquery"
+       "imagentitulomediaquery"
+       "h1mediaquery"
+       "textoquienesmediaquery"
+       "imagenquienesmediaquery"
+       "footermediaquery";
+       grid-column: 1fr ;
+    }
+
+}
